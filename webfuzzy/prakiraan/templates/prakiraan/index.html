@@ -1,0 +1,57 @@
+<!-- {% if dataCuaca %}
+    <ul>
+    {% for data in dataCuaca %}
+        <li>{{ data.title }}</li>
+        <li>{{ data.sweat }}</li>
+        <li>{{ data.cape }}</li>
+        <li>{{ data.rh700 }}</li>
+        <li>{{ data.total }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Tidak ada data</p>
+{% endif %} -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h4 class="card-title ">Sistem Peramalan Cuaca Berbasis Logika Fuzzy</h4>
+                    <p class="card-category">Tugas Sistem Cerdas</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>SWEAT</th>
+                                    <th>CAPE</th>
+                                    <th>RH 700</th>
+                                    <th>Prakiraan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if dataCuaca %}
+                                    {% for data in dataCuaca %}
+                                        <tr>
+                                            <td>{{ data.title }}</td>
+                                            <td>{{ data.sweat }}</td>
+                                            <td>{{ data.cape }}</td>
+                                            <td>{{ data.rh700 }}</td>
+                                            <td>{{ data.total }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <p>Tidak ada data</p>
+                                {% endif %}  
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
